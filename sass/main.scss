@@ -35,9 +35,93 @@
   font-family: "Montserrat-Regular", sans-serif;
 }
 
-/*********************************Main Styles***************************************************/
+/*********************************JavaScript items styles***************************************************/
+.alert {
+  width: 400px;
+  margin-top: 15px;
+  position: relative;
+  padding: 0.75rem 1.25rem;
+  margin-bottom: 1rem;
+  border-radius: 0.25rem;
+  color: #721c24;
+  background-color: #f8d7da;
+  border-color: #f5c6cb;
+}
+.closebtn {
+  margin-left: 15px;
+  color: white;
+  font-weight: bold;
+  float: right;
+  font-size: 22px;
+  line-height: 20px;
+  cursor: pointer;
+  transition: 0.3s;
+}
 
-body {
+.closebtn:hover {
+  color: black;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  padding-top: 250px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0,0,0,0.4);
+}
+
+.modal-content {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  background-color: #ffffff;
+  margin: auto;
+  padding: 10px;
+  border: 1px solid #888;
+  border-radius: 10px;
+  width: 350px;
+  text-align: center;
+  p{
+    color: #721c24;
+    font-size: 20px;
+    margin: 5px 0;
+  }
+}
+
+.close {
+  position: absolute;
+  top: -5px;
+  right: 5px;
+  color: red;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/***************************************************Main styles*************************************************************/
+html, body {
+  padding: 0;
+  margin: 0;
+}
+* {
+  box-sizing: border-box;
+}
+html, body {
+  padding: 0;
+  margin: 0;
+
   .body-width {
     max-width: 1280px;
     margin: 0 auto;
@@ -51,17 +135,18 @@ body {
       repeat: no-repeat;
     };
 
-    //.layer {
-    //  position: absolute;
-    //  top: 0;
-    //  bottom: 0;
-    //  left: 0;
-    //  right: 0;
-    //  width: 100%;
-    //  background-color: rgba(31, 32, 33, 0.79);;
-    //}
+    .layer {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      width: 100%;
+      background-color: rgba(31, 32, 33, 0.79);;
+    }
 
     .container {
+      position: relative;
       padding: 5px 80px;
 
       .navbar {
@@ -202,6 +287,7 @@ body {
                     position: absolute;
                     top: 30px;
                     right: 30px;
+                    cursor: pointer;
                   }
 
                   .sale {
@@ -217,6 +303,7 @@ body {
                     display: flex;
                     align-items: center;
                     justify-content: center;
+                    cursor: pointer;
                   }
 
                 }
@@ -308,6 +395,7 @@ body {
           }
 
           .below-part {
+            position: relative;
             width: 100%;
             display: flex;
             align-items: center;
@@ -322,6 +410,16 @@ body {
               border-radius: 10px;
               background-color: transparent;
               font-size: 14px;
+              cursor: pointer;
+              &:nth-child(2){
+                position: absolute;
+                right: 0;
+                top: 45px;
+                height: 59px;
+                width: 59px;
+                border-radius: 0;
+                background-color: rgba(110, 187, 211, 1);
+              }
 
               &:hover {
                 background-color: rgba(110, 187, 211, 1);
@@ -331,7 +429,9 @@ body {
               &:active {
                 background-color: rgba(31, 32, 33, 1);
               }
+
             }
+
           }
         }
       }
@@ -370,10 +470,11 @@ body {
                 height: 55px;
                 width: 270px;
                 border-radius: 10px;
-                border: 0;
+                border: none;
                 box-shadow: none;
                 font-size: 14px;
                 padding-left: 15px;
+                outline: 0;
               }
 
               button {
@@ -385,6 +486,7 @@ body {
                 font-size: 14px;
                 background-color: rgba(110, 187, 211, 1);
                 border: 0;
+                cursor: pointer;
 
                 &:hover {
                   background-color: rgba(110, 187, 211, 0.95);

@@ -65,11 +65,18 @@
             </div>
 
             <div class="row">
+                <div id="myModal" class="modal">
+                    <div class="modal-content">
+                        <p class="font-family-regular">&hearts; &hearts; &hearts; Added WishList &hearts; &hearts; &hearts;</p>
+                        <span class="close">&times;</span>
+                    </div>
+
+                </div>
                 <div class="col-3">
                     <div class="card">
                         <div class="card-header">
                             <img src="images/cat-1.png" alt="">
-                            <div class="heart-grey">
+                            <div class="heart-grey" onclick="changeModal()">
                                 <img src="images/icons/heart.png" alt="">
                             </div>
                             <div class="sale">
@@ -107,7 +114,7 @@
                     <div class="card">
                         <div class="card-header">
                             <img src="images/cat-2.png" alt="">
-                            <div class="heart-grey">
+                            <div class="heart-grey" onclick="changeModal()">
                                 <img src="images/icons/heart-white.png" alt="">
                             </div>
                         </div>
@@ -141,7 +148,7 @@
                     <div class="card">
                         <div class="card-header">
                             <img src="images/cat-3.png" alt="">
-                            <div class="heart-grey">
+                            <div class="heart-grey" onclick="changeModal()">
                                 <img src="images/icons/heart.png" alt="">
                             </div>
                         </div>
@@ -175,7 +182,7 @@
                     <div class="card">
                         <div class="card-header">
                             <img src="images/cat-1.png" alt="">
-                            <div class="heart-grey">
+                            <div class="heart-grey" onclick="changeModal()">
                                 <img src="images/icons/heart.png" alt="">
                             </div>
                         </div>
@@ -210,7 +217,7 @@
                     <div class="card">
                         <div class="card-header">
                             <img src="images/cat-3.png" alt="">
-                            <div class="heart-grey">
+                            <div class="heart-grey" onclick="changeModal()">
                                 <img src="images/icons/heart.png" alt="">
                             </div>
                             <div class="sale">
@@ -247,7 +254,7 @@
                     <div class="card">
                         <div class="card-header">
                             <img src="images/cat-2.png" alt="">
-                            <div class="heart-grey">
+                            <div class="heart-grey" onclick="changeModal()">
                                 <img src="images/icons/heart-white.png" alt="">
                             </div>
                         </div>
@@ -282,6 +289,10 @@
                 <button type="button" class="font-family-regular">
                     Показать еще 20
                 </button>
+                
+                <button class="above" type="button">
+                    <img src="images/icons/vector-top.png" alt="">
+                </button>
             </div>
         </div>
     </section>
@@ -297,18 +308,21 @@
                 </div>
 
                 <div class="col-7">
-                    <input type="email" class="email-input" placeholder="Email">
-                    <button class="font-family-regular" type="button">Подписаться</button>
+                    <input type="email" class="email-input" placeholder="Email" id="email-address">
+                    <button class="font-family-regular" type="button" onclick="validateEmail()">Подписаться</button>
+
+                    <div id="result"></div>
+
                     <label class="checkbox-part font-family-light">Подписаться на новости
                         <input type="checkbox" class="font-family-light">
                         <span class="checkmark"></span>
                     </label>
+
                 </div>
             </div>
         </div>
     </section>
 </div>
-
 <script src="js/main.js"></script>
 </body>
 </html>
